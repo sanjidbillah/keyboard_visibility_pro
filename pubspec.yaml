@@ -1,7 +1,7 @@
 name: keyboard_visibility_pro
 description: A new Flutter keyboard visibility package.
 version: 0.0.1
-homepage:
+homepage: https://github.com/sanjidbillah/keyboard_visibility_pro
 
 environment:
   sdk: ">=2.12.1 <3.0.0"
