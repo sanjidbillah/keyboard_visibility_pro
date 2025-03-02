@@ -3,7 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:keyboard_visibility_pro/keyboard_visibility_pro.dart';
 
 void main() {
-  testWidgets('KeyboardVisibility detects keyboard visibility changes', (WidgetTester tester) async {
+  testWidgets('KeyboardVisibility detects keyboard visibility changes',
+      (WidgetTester tester) async {
     // Track keyboard visibility changes
     bool keyboardVisible = false;
     bool callbackCalled = false;
@@ -59,7 +60,8 @@ void main() {
     expect(keyboardVisible, false);
   });
 
-  testWidgets('KeyboardVisibility should not trigger callback if visibility state is unchanged',
+  testWidgets(
+      'KeyboardVisibility should not trigger callback if visibility state is unchanged',
       (WidgetTester tester) async {
     // Track keyboard visibility changes
     bool keyboardVisible = false;
@@ -93,7 +95,8 @@ void main() {
     expect(keyboardVisible, true);
 
     // Simulate another metrics change but with keyboard still visible
-    tester.view.viewInsets = const FakeViewPadding(bottom: 400); // Different height but still visible
+    tester.view.viewInsets = const FakeViewPadding(
+        bottom: 400); // Different height but still visible
 
     await tester.pumpAndSettle();
 
@@ -102,7 +105,8 @@ void main() {
     expect(keyboardVisible, true);
   });
 
-  testWidgets('KeyboardVisibility should properly clean up observers', (WidgetTester tester) async {
+  testWidgets('KeyboardVisibility should properly clean up observers',
+      (WidgetTester tester) async {
     // Build our app with the KeyboardVisibility widget
     await tester.pumpWidget(
       MaterialApp(
