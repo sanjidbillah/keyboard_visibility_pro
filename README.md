@@ -6,7 +6,7 @@ This flutter pacakge will detect soft-keyboard open and close status.
 In the `dependencies`: section of your `pubspec.yaml`, add the following line:
 ```
 dependencies:
-     keyboard_visibility_pro: ^1.0.1
+     keyboard_visibility_pro: ^1.0.0
 ```
 install packages from the command line:
 
