@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -22,9 +22,11 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text("Keyboard visibility example"),
       ),
       body: KeyboardVisibility(
-        // it will notify
-        onChanged: (bool visible) {
-          print(visible);
+        // This callback is triggered whenever the visibility of the keyboard changes.
+        // It passes a boolean value `isKeyboardVisible` that indicates whether the keyboard is visible or not.
+        // The value is printed to the console for debugging purposes.
+        onChanged: (bool isKeyboardVisible) {
+          print(isKeyboardVisible);
         },
         child: Center(
           child: Column(
